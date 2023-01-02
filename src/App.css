@@ -1,0 +1,26 @@
+#dark {
+  background-color: #040407!important;
+}
+
+.btn-primary {
+  --bs-btn-color: #fff;
+  --bs-btn-bg: #040407 !important;
+  --bs-btn-border-color: #040407 !important;
+}
+
+.btn:hover {
+  color: var(--bs-btn-hover-color);
+  background-color: #040407 !important;
+  border-color: #040407 !important;
+}
+
+button{
+  margin: 0 1% !important;
+}
+
+.bou{
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+
+}
