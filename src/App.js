@@ -3,6 +3,7 @@ import './App.css';
 import Header from './Components/Header';
 import Ajouter from './Components/Ajouter';
 import ListMovies from './Components/ListMovies';
+import FilterMovie from './Components/FilterMovie';
 
 function App() {
   const [movies,setMovies] = useState(
@@ -14,12 +15,15 @@ function App() {
   
     ]
   )
+  const [titre,setTitre] = useState('')
+  const [etoile,setEtoile] = useState(0)
   return (
   <div>
     <Header/>
     <br></br>
+    <FilterMovie setTitre={setTitre} setEtoile={setEtoile} titre={titre} etoile={etoile}/>
     <Ajouter movies={movies} setMovies={setMovies}/>
-    <ListMovies movies={movies} setMovies={setMovies}/>
+    <ListMovies movies={movies} setMovies={setMovies} titre={titre} etoile={etoile}/>
   </div>
   );
 }

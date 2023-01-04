@@ -1,7 +1,7 @@
 import {Card,Button} from 'react-bootstrap'
 import Rating from '@mui/material/Rating'
 const CardMovies=({el,movies,setMovies})=>{
-    const handleDelete=(a)=> setMovies(movies.filter(el=> el.id != a))
+    const handleDelete=(a)=> setMovies(movies.filter(el=> el.id !== a))
     return(
     <Card style={{ width: '18rem' }}>
       <Card.Img variant="top" src={el.posterURL} />
@@ -17,6 +17,7 @@ const CardMovies=({el,movies,setMovies})=>{
         <Button variant="primary">Edit</Button>
       </Card.Body>
     </Card>
+    
     )
 }
 
